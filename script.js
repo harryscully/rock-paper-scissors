@@ -79,7 +79,15 @@ function playGame() {
 
     humanSelection = getHumanChoice();
     computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);    
+    playRound(humanSelection, computerSelection);
+
+    if (humanScore > computerScore) {
+        alert("You win!")
+    }  else if (humanScore < computerScore) {
+        alert("You lose!")
+    } else {
+        alert("It's a draw")
+    };
 };
 
 playGame();
