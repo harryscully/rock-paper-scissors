@@ -1,36 +1,85 @@
-// 01. Your game will be played against the computer. You will write a function that randomly returns “rock”, “paper” or “scissors”.
-
 // Create a new function named getComputerChoice
 function getComputerChoice() {
     // Generate random 0 to 1, then multiply by 3 to get random between 0-3
-    let computerChoice = Math.random() * 3;
+    let number = Math.random() * 3;
+    let computerChoice = "";
     // Conditionally pick rock, paper or scissors
-    if (computerChoice < 1) {
-        return console.log("rock");
-    } else if (computerChoice < 2) {
-        return console.log("paper");
+    if (number < 1) {
+        computerChoice = "rock"
+    } else if (number < 2) {
+        computerChoice = "paper"
     } else {
-        return console.log("scissors");
+        computerChoice = "scissors"
     }
+    return computerChoice
  };
- getComputerChoice();
-
-// 02. Your game will be played by a human player. You will write a function that takes the user choice and returns it.
 
 // Create a function called getHumanChoice
 function getHumanChoice() {
     // Function prompts user for a choice of rock, paper or scissors
     // User input stored in a variable
        let humanChoice = prompt("choose rock, paper, or scissors");
-       return console.log(humanChoice);
+       return humanChoice;
     };
-getHumanChoice();
 
-// 03. Your game will keep track of the players score. You will write variables to keep track of the players score.
-
-let humanScore = 0;
-let computerScore = 0;
-
-// 04. Your game will be played round by round. You will write a function that takes the human and computer player choices as arguments, plays a single round, increments the round winner’s score and logs a winner announcement.
 
 // 05 Your game will play 5 rounds. You will write a function named playGame that calls playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
+
+function playGame() {
+    // Variables to track the scores of the players
+    let humanScore = 0;
+    let computerScore = 0;
+
+    // Create function playRound
+    // Inputs to playRound will be humanChoice and computerChoice
+    function playRound(humanChoice, computerChoice) {
+        let humanChoiceLower = humanChoice.toLowerCase();
+        let result = ""
+        if ((humanChoiceLower == "rock") && (computerChoice == "scissors")) {
+            result = "You win! Rock beats scissors.";
+            humanScore = ++humanScore;
+        } else if ((humanChoiceLower == "scissors") && (computerChoice == "paper")) {
+            result = "You win! Scissors beats paper.";
+            humanScore = ++humanScore;
+        } else if ((humanChoiceLower == "paper") && (computerChoice == "rock")) {
+            result = "You win! Paper beats rock.";
+            humanScore = ++humanScore;
+        } else if ((humanChoiceLower == "rock") && (computerChoice == "paper")) {
+            result = "You lose! Paper beats rock.";
+            computerScore = ++computerScore;
+        } else if ((humanChoiceLower == "paper") && (computerChoice == "scissors")) {
+            result = "You lose! Scissors beats paper.";
+            computerScore = ++computerScore;
+        } else if ((humanChoiceLower == "scissors") && (computerChoice == "rock")) {
+            result = "You lose! Rock beats scissors.";
+            computerScore = ++computerScore;
+        } else {
+            result = "It's a draw!";
+        };
+        console.log(result);
+        console.log("Human: " + humanScore);
+        console.log("Computer: " + computerScore);
+    }
+    
+    let humanSelection = getHumanChoice();
+    let computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);    
+};
+
+playGame();
