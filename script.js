@@ -28,6 +28,9 @@ getHumanChoice();
 
 // 03. Your game will keep track of the players score. You will write variables to keep track of the players score.
 
+let humanScore = 0;
+let computerScore = 0;
+
 // 04. Your game will be played round by round. You will write a function that takes the human and computer player choices as arguments, plays a single round, increments the round winner’s score and logs a winner announcement.
 
 // 05 Your game will play 5 rounds. You will write a function named playGame that calls playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
