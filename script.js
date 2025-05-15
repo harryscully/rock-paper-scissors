@@ -14,8 +14,17 @@ function getComputerChoice() {
     }
  };
  getComputerChoice();
- 
+
 // 02. Your game will be played by a human player. You will write a function that takes the user choice and returns it.
+
+// Create a function called getHumanChoice
+function getHumanChoice() {
+    // Function prompts user for a choice of rock, paper or scissors
+    // User input stored in a variable
+       let humanChoice = prompt("choose rock, paper, or scissors");
+       return console.log(humanChoice);
+    };
+getHumanChoice();
 
 // 03. Your game will keep track of the players score. You will write variables to keep track of the players score.
 
