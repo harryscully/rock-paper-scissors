@@ -1,5 +1,20 @@
 // 01. Your game will be played against the computer. You will write a function that randomly returns “rock”, “paper” or “scissors”.
 
+// Create a new function named getComputerChoice
+function getComputerChoice() {
+    // Generate random 0 to 1, then multiply by 3 to get random between 0-3
+    let computerChoice = Math.random() * 3;
+    // Conditionally pick rock, paper or scissors
+    if (computerChoice < 1) {
+        return console.log("rock");
+    } else if (computerChoice < 2) {
+        return console.log("paper");
+    } else {
+        return console.log("scissors");
+    }
+ };
+ getComputerChoice();
+ 
 // 02. Your game will be played by a human player. You will write a function that takes the user choice and returns it.
 
 // 03. Your game will keep track of the players score. You will write variables to keep track of the players score.
