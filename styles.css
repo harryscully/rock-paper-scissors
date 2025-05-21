@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono',monospace;
+    background-color: lightgreen;
+}
+
+h1 {
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+    font-size: 50px;
+    background-color: lightgreen;
+}
+
+.score-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 1em;
+    background-color: lightgreen;
+}
+
+.human, .computer, .divider {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.score {
+    font-size: 100px;
+    text-align: center;
+}
+
+.divider {
+    width: 50px;
+}
+
+.header {
+    text-align: center;
+}
+
+.choice-section {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgreen;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+button {
+    font-family: 'Space Mono',monospace;
+    padding: 1em;
+    border-style: none;
+    border-radius: 10%;
+    box-shadow: 5px 5px 20px darkgreen;
+}
+
