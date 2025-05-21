@@ -22,7 +22,7 @@ function resetGame() {
     computerScore = 0;
     scoreHuman.textContent = humanScore;
     scoreComputer.textContent = computerScore;
-    resultOutput.textContent = "Welcome. Make your move.";
+    resultOutput.textContent = "New game! Make your move.";
 }
 
 // Create function playRound
@@ -54,12 +54,16 @@ function playRound(humanChoice, computerChoice) {
 
     // Check for winning condition
     if (humanScore === 5) {
-        alert("You win!!!");
-        resetGame();
-    } else if (computerScore === 5) {
-        alert("Unlucky...computer wins this time");
-        resetGame();
-    }
+        setTimeout( () => {
+            alert("You win!!!");
+            resetGame()
+        },500);
+        } else if (computerScore === 5) {
+        setTimeout(() => {
+            alert("Unlucky...computer wins this time");
+            resetGame()
+            }, 500);
+        }
 }
 
 const rockButton = document.querySelector("#rock");
