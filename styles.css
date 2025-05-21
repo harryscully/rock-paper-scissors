@@ -63,3 +63,17 @@ button {
     box-shadow: 5px 5px 20px darkgreen;
 }
 
+.result-section {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgreen;
+}
+
+.output-result {
+    font-size: 30px;
+    font-weight: bold;
+}
+
