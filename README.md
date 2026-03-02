@@ -1,16 +1,22 @@
-# Rock Paper Scissors game
-This is a simple web-based rock paper scissors game against the computer. First to 5 wins.
+# Rock Paper Scissors 🪨📃✂️
+
+A classic game of rock paper scissors built with vanilla JavaScript.
+
+**Live demo:** https://harryscully.github.io/rock-paper-scissors/
 
 ## Features
-- Choose rock, paper, or scissors to play
-- Randomised computer response
-- Score tracking for both players
-- Displays round result and alerts when a player reaches 5 points
-- Game resets after final round
+
+- Play against the computer
+- First to 5 wins
+- Tracks score for both player and computer
+- Resets automatically after a winner is found
+
+## Built with
+
+- HTML
+- CSS
+- JavaScript
 
 ## What I learned
-This project allowed me to learn the following:
-- **JavaScript functions** for reusable code
-- **Conditional statements** to determine round winners
-- **DOM manipulation** to dynamically update the scores and round results
-- **Event listeners** for detecting button clicks
+
+One of my earlier JavaScript projects — a good exercise in writing game logic with conditionals, tracking state with variables, and connecting DOM elements to game actions via event listeners.
